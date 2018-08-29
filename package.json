@@ -6,8 +6,7 @@
   "scripts": {
     "start": "electron .",
     "build_mac": "electron-packager . Elc-WebViewr --platform=darwin --arch=x64 --ignore=node_modules/electron-*",
-    "build": "electron-packager . Elc-WebViewr --ignore=node_modules/electron-* --platform=win32 --arch=x64 ",
-    "package": "asar pack Elc-WebViewr-win32-x64/resources/app Elc-WebViewr-win32-x64/resources/app.asar ; rmdir Elc-WebViewr-win32-x64/resources/app -r"
+    "build_win": "electron-packager . Elc-WebViewr --ignore=node_modules/electron-* --platform=win32 --arch=x64 "
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
