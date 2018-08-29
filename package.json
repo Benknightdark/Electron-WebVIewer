@@ -4,7 +4,10 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build_mac": "electron-packager . Elc-WebViewr --platform=darwin --arch=x64 --ignore=node_modules/electron-*",
+    "build": "electron-packager . Elc-WebViewr --ignore=node_modules/electron-* --platform=win32 --arch=x64 ",
+    "package": "asar pack Elc-WebViewr-win32-x64/resources/app Elc-WebViewr-win32-x64/resources/app.asar ; rmdir Elc-WebViewr-win32-x64/resources/app -r"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -20,6 +23,7 @@
     "electron": "^2.0.8"
   },
   "dependencies": {
-    "dotenv": "^6.0.0"
+    "electron-config-env": "^1.5.0",
+    "electron-packager": "^12.1.1"
   }
 }
